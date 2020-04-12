@@ -1,13 +1,19 @@
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class InputOutput {
  public static void main (String [] args) {
-	Scanner scanner = new Scanner (System.in);
+	Scanner scanner   = new Scanner (System.in);
+	Calendar calendar = Calendar.getInstance();
 	String nama;
 	String kelas;
 	int jumlahSKS;
 	double IPK;
-
+	
+	System.out.println("================================================");
+	System.out.println("Waktu sekarang "+ calendar.getTime());
+	System.out.println("================================================");
+	System.out.println();
 	System.out.print("Masukkan Nama Anda : ");
 	nama = scanner.nextLine();
 
@@ -22,8 +28,11 @@ public class InputOutput {
 
 	double jumlah = IPK * jumlahSKS;
 
+	System.out.println();
 	System.out.println("Hai, "+nama);
-	System.out.println("Kamu anak kelas, "+kelas);
+	System.out.println("Kamu anak kelas "+kelas);
 	System.out.print("Total Nilai = "+jumlah);
+	System.out.println();
+	System.out.println("================================================");
 	}
 }
